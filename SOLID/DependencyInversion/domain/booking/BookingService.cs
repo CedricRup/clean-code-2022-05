@@ -4,9 +4,9 @@ namespace SOLID.DependencyInversion.domain.booking
 {
     public class BookingService
     {
-        private readonly IAvailabilityDao bookings;
+        private readonly AvailabilityDaoImpl bookings;
 
-        public BookingService(IAvailabilityDao bookings)
+        public BookingService(AvailabilityDaoImpl bookings)
         {
             this.bookings = bookings;
         }
