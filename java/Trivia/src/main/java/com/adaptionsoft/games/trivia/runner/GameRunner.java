@@ -7,30 +7,30 @@ import com.adaptionsoft.games.uglytrivia.Game;
 
 public class GameRunner {
 
-	private static boolean notAWinner;
+	private static boolean gameMustContinue;
 
 	public static void main(String[] args) {
-		Game aGame = new Game();
+		Game game = new Game();
 		
-		aGame.Add("Chet");
-		aGame.Add("Pat");
-		aGame.Add("Sue");
+		game.AddPlayer("Chet");
+		game.AddPlayer("Pat");
+		game.AddPlayer("Sue");
 		
 		Random rand = new Random();
 	
 		do {
 			
-			aGame.roll(rand.nextInt(5) + 1);
+			game.roll(rand.nextInt(5) + 1);
 			
 			if (rand.nextInt(9) == 7) {
-				notAWinner = aGame.wrongAnswer();
+				gameMustContinue = game.wrongAnswer();
 			} else {
-				notAWinner = aGame.wasCorrectlyAnswered();
+				gameMustContinue = game.wasCorrectlyAnswered();
 			}
 			
 			
 			
-		} while (notAWinner);
+		} while (gameMustContinue);
 		
 	}
 }
