@@ -23,7 +23,7 @@ public class GameRunner {
 			game.roll(rand.nextInt(5) + 1);
 			
 			if (rand.nextInt(9) == 7) {
-				gameMustContinue = game.wrongAnswer();
+				gameMustContinue = game.wasWronglyAnswered();
 			} else {
 				gameMustContinue = game.wasCorrectlyAnswered();
 			}

@@ -21,7 +21,7 @@ public class SomeTest {
 		Game game = new Game();
 		game.AddPlayer("Cedric");
 		game.roll(12);
-		game.wrongAnswer();
+		game.wasWronglyAnswered();
 		game.roll(2);
 		game.roll(13);
 		game.wasCorrectlyAnswered();
@@ -75,7 +75,7 @@ public class SomeTest {
 		game.AddPlayer("Cedric");
 		game.AddPlayer("Eloïse");
 		game.roll(1);
-		game.wrongAnswer();
+		game.wasWronglyAnswered();
 		game.roll(2);
 		game.wasCorrectlyAnswered();
 		game.roll(2);
